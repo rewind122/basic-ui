@@ -4,16 +4,6 @@
   --container-size: 940px;
 }
 
-/* 버튼 스타일 (border-box, content-box 차이) */
-/* button, 
-a {
-  display: inline-block;
-  width: 100px;
-  padding: 20px;
-  border: 1px solid currentColor;
-  border-radius: 10px;
-} */
-
 body {
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -29,50 +19,57 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: yellow;
-  height: 10vh;
+  background-color: darkblue;
+  height: 120px;
   padding: 0 50px;
+  border-radius: 0 0 15px 15px;
+  /* border-radius: 1 2 3 4 (x축의 값) / 5 6 7 8 (y축의 값) */
+  position: relative;
 }
+
+/* 로고 */
+.logo {
+  background: rgb(255, 214, 131);
+  position: absolute;
+  top: 45px;
+  left: 60px;
+}
+
 /* 비주얼 */
 .visual {
   background-color: pink;
   height: 10vh;
 }
+
 /* 메인 컨텐츠 */
 .main {
   background-color: skyblue;
-  /* height: 60vh; */
   display: flow-root;
   min-height: 450px;
-  padding: 0 15px;
+  padding: 28px 16px 36px;
 }
 
 .group {
   border: 1px solid red;
-  /* margin: 0 auto;  space-around와 유사한 방법~ */
-  margin: 0 15px;
+  float: left;
 }
 
-.group-wrapper {
-  float: right;
-  /* border: 1px solid green; */
+.group:nth-child(n+2) {
+  margin-left: 44px;
 }
 
 .group1 {
   width: 250px;
-  float: left;
   background: olive;
 }
 
 .group2 {
   width: 380px;
-  float: left;
   background: silver;
 }
 
 .group3 {
   width: 190px;
-  float: left;
   background: hotpink;
 }
 
@@ -80,8 +77,8 @@ body {
 .slogan {
   background-color: lime;
   height: 10vh;
-  /* clear: both; */
 }
+
 /* 푸터 */
 .footer {
   background-color: orange;
@@ -89,4 +86,17 @@ body {
 .footer-inner {
   background: yellow;
   height: 10vh;
+}
+
+
+/* ------------------------------------------------------ */
+/*           flex를 지원하는 웹브라우저를 위한 스타일           */
+/* ------------------------------------------------------ */
+
+@supports (display: flex) {
+  .main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
 }
