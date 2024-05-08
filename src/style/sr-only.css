@@ -1,0 +1,17 @@
+.sr-only {
+  background: red;
+  position: absolute;
+  /* 논리 속성 */
+  /* inline-size: 1px;
+  block-size: 1px; */
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  overflow: hidden;
+  /* 아래 셋 다 숨기는(공간을 없애는) 속성들 */
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
