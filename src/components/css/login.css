@@ -5,10 +5,13 @@
 /* input 컴포넌트 */
 .form-input {
   --spacing: 10px
+  --border-color: var(--gray-500);
+  --radius: 3px;
   
   display: flex;
   flex-flow: row nowrap;
   gap: var(--spacing);
+  border: 1px solid #fff;
 
   label {
     white-space: nowrap;
@@ -16,12 +19,21 @@
 
   input {
     flex-grow: 1;
-    border: 1px solid #aaa;
-    border-radius: 3px;
+    /* border: 1px solid var(--border-color); */
+    border: 0;
+    /* border-radius: var(--radius); */
     padding: 1px 1px 1px 8px;
     height: 24px;
     block-size: 24px;
     width: 100%;
+  }
+
+  input:focus {
+    outline: 0;
+  }
+
+  &:focus-within {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -74,7 +86,7 @@
   background-image: radial-gradient(circle at right top, var(--start-color), var(--end-color));
   border-radius: var(--radius);
   padding: var(--spacing);
-  box-shadow: var(--shadow-depth) var(--shadow-depth) 0 0 var(--box-shadow-color);
+  box-shadow: var(--shadow-depth) var(--shadow-depth) 0 0 var(--shadow-color);
   
   /* 로그인 제목 */
   .login-title {
