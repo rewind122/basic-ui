@@ -10,6 +10,6 @@ body *, body *::before, body *::after {
 }
 
 body {
-  font-weight: var(--base-font-family);
+  font-family: var(--base-font-family);
   line-height: 1.15;
 }
