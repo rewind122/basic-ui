@@ -1,9 +1,105 @@
+@import url(/style/reset.css);
 @import url(/style/theme.css);
+@import url(/style/base.css);
 
-:root {
-  --base-font-family: "SUIT Variable", sans-serif;
+/* 로그인 */
+.login {
+  width: 244px;
+  inline-size: 244px;
+
+  --box-start-color: var(--orange-100);
+  --box-end-color: var(--orange-200);
+  --box-shadow-color: var(--gray-700);
+
+  background-image: radial-gradient(circle at right top, var(--box-start-color), var(--box-end-color));
+  border-radius: 5px;
+  padding: 12px;
+  box-shadow: 5px 5px 0 0 var(--box-shadow-color);
 }
 
-body {
-  font-weight: var(--base-font-family);
+.login-title {
+  --color: var(--yellow);
+
+  color: var(--color);
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.login-form {
+  margin-top: 8px;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  padding: 8px 8px 0 8px;
+
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0 0 8px 0;
+    border-bottom: 1px solid #ccc;
+
+    
+    position: relative;
+    
+    /* display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between; */
+
+    div {
+      margin-bottom: 4px;
+    }
+    
+    label {
+      display: inline-block;
+      width: 4em;
+      font-size: 14px;
+    }
+
+    input {
+      width: calc(100% - 133px);
+      border: 1px solid #aaa;
+      border-radius: 3px;
+      padding: 1px 1px 1px 8px;
+      height: 24px;
+    }
+    
+    .login-button {
+      border: 0;
+      padding: 16px 10px;
+      background-color: var(--orange-200);
+      color: #fff;
+      border-radius: 5px;
+
+      font-size: 13px;
+
+      line-height: 20px;
+
+      position: absolute;
+      top: 0;
+      inset-block-start: 0;
+      right: 0;
+      inset-inline-end: 0;
+    }
+  }
+}
+
+.member-sign {
+  background-color: #fff;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  font-size: 13px;
+
+  span {
+    margin-right: 4px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
