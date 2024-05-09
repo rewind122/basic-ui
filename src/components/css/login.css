@@ -4,7 +4,7 @@
 
 /* input 컴포넌트 */
 .form-input {
-  --spacing: 10px
+  --spacing: 10px;
   --border-color: var(--gray-500);
   --radius: 3px;
   
