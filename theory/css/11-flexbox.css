@@ -18,6 +18,7 @@ body {
 }
 
 .container-fluid {
+  width: 80%;
   margin: 0 auto;
   /* width: clamp(500px, 80%, 800px); */
 }
@@ -67,23 +68,61 @@ body {
   height: 50px;
 }
 
-/* .main과 .sidebar를 Grouping */
 .wrapper {
   display: flex;
   flex-flow: row nowrap;
-  column-gap: 100px;
+  column-gap: 50px;
   flex: 1 0 0;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
+/* .main과 .sidebar를 Grouping */
 .main {
-  flex-basis: 200px;
-  flex-grow: 5;
-  flex-shrink: 0;
+  flex: 1 0 0;
+  min-width: 500px;
+
+  .pagination {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
 
 .sidebar {
-  flex-basis: 200px;
-  flex-grow: 2;
-  flex-shrink: 0;
+  flex: 0 0 150px;
+}
+
+.pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 0.5rem;
+
+  button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    flex: 0 0 2rem;
+    color: var(--light-blue);
+  }
+
+  button:focus {
+    border: 1px solid var(--dark-blue);
+  }
+
+  div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex: 1 1 0;
+
+    a {
+      color: var(--light-blue);
+      padding: 0.5rem 1rem;
+    }
+  
+    .is-selected {
+      color: var(--dark-blue);
+      font-weight: 700;
+    }
+  }
 }
