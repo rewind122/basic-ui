@@ -17,7 +17,7 @@ body {
   } */
 }
 
-.container-flude {
+.container-fluid {
   margin: 0 auto;
   /* width: clamp(500px, 80%, 800px); */
 }
