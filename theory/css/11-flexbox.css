@@ -1,0 +1,89 @@
+@import url(./defalt.css);
+
+body {
+  /* font-size: clamp(0.75rem, 3vw ,2.25rem); */
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  /* width: 80%;
+  margin: 0 auto; */
+
+  /* div {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #000;
+  } */
+}
+
+.container-flude {
+  margin: 0 auto;
+  /* width: clamp(500px, 80%, 800px); */
+}
+
+.container-fixed {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* .header, .navigation, .wrapper, .footer {
+  width: 80%;
+  margin: 0 auto;
+} */
+
+.header {
+  height: 70px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 20px;
+
+  div {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #000;
+  }
+}
+
+.logo {
+  /* margin-right: auto; */
+  flex-shrink: 0;
+}
+
+.login {
+  order: 1;
+  flex-shrink: 0;
+}
+
+.search {
+  flex-grow: 1;
+}
+
+.navigation {
+  height: 50px;
+}
+
+.footer {
+  height: 50px;
+}
+
+/* .main과 .sidebar를 Grouping */
+.wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 100px;
+  flex: 1 0 0;
+  overflow: auto;
+}
+
+.main {
+  flex-basis: 200px;
+  flex-grow: 5;
+  flex-shrink: 0;
+}
+
+.sidebar {
+  flex-basis: 200px;
+  flex-grow: 2;
+  flex-shrink: 0;
+}
