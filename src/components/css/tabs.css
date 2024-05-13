@@ -1,0 +1,93 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+
+/* 탭 컴포넌트 */
+
+body, h1 {
+  margin: 20px;
+}
+
+.tabs {
+  width: 50%;
+  position: relative;
+}
+
+/* 탭 컴포넌트 */
+.tab-list {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .tab {
+    /* 텍스트 가운데 정렬 */
+    /* 지금과 같은 경우에는 패딩이 그 역할을 해주기 때문에 굳이 필요하지 않다~ */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+
+    padding: 10px 16px;
+    background-color: var(--gray-200);
+    border: 1px solid var(--gray-700);
+    border-radius: 5px 5px 0 0;
+    border-bottom: 0;
+    color: var(--gray-700);
+
+    &.is-selected {
+      background-color: var(--white);
+      border-color: currentColor;
+      /* 보더의 색상이 글자색을 따라가게 하려면 currentColor를 사용 */
+      color: var(--orange-200);
+    }
+  }
+}
+
+/* 탭 패널, 탭 패널 아이템 */
+.tab-panel {
+  padding-top: 24px;
+  /* display: flex; */
+  flex-flow: column nowrap;
+  row-gap: 8px;
+
+  display: none;
+
+  &.is-selected {
+    display: flex;
+  }
+
+  .tab-more {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.tab-panel-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+
+  a {
+    /* display: flex;
+    flex-flow: row nowrap;
+    gap: 8px; */
+    /* 플렉스 컨테이너는 말줄임표 적용이 안 된다... */
+    flex: 1 1 auto;
+    /* 아래 세가지 속성은 세트! */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    span {
+      margin-right: 8px;
+    }
+  }
+
+  .date {
+    flex: 0 0 auto;
+  }
+}
