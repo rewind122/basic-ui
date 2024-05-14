@@ -1,83 +1,73 @@
 @import url(defalt.css);
 
+/* 개발자도구 레이아웃 탭에서 그리드 라인을 확인할 수 있음 */
+/* 백분율로 설계하고 갭을 주면 갭이 더해짐 > 프랙션단위를 사용하자! */
+/* 음수값 : 반응형으로 각 기기별 컬럼 배치가 다를 때 유용하게 쓸 수 있다 */
+/* 그리드는 배치가 자유로운 만큼 접근성에 대한 고민이 필요하다 */
+/* 갭, 그리드 네임 속성, 리피트 함수는 익스11이 사용 안 됨 */
+
 body {
   margin: 50px;
 }
 
-.container {
-  border: 10px solid black;
+.container{
+  height: 600px;
+  border: 10px solid salmon;
+  margin: 0 auto;
+  width: 1000px;
   display: grid;
-  /* 개발자도구 레이아웃 탭에서 그리드 라인을 확인할 수 있음 */
-  /* grid-template-columns: 100px 100px 100px 100px; */
-  /* grid-template-columns: 1fr 2fr 3fr 4fr; */
-  grid-template-columns: repeat(4, 1fr);
-  /* grid-auto-columns: minmax(50px, 1fr); */
-  /* 1fr 1프렉션?(분수) 플렉스 그로우와 유사함 */
-  /* grid-template-rows: repeat(10, 50px); */
+  grid-template-columns: repeat(6, 100px);
   grid-auto-rows: minmax(50px, auto);
-  /* 템플릿으로 수치를 주면 첫줄만 / 오토를 사용하면 동일하게 */
   grid-auto-flow: dense;
-  gap: 20px;
-
-  /* 영역 기반 배치 방식 */
-  grid-template-areas: "cell-1 cell-1 cell-2 cell-3"
-                      "cell-1 cell-1 cell-2 cell-3"
-                      "cell-1 cell-1 cell-4 cell-4"
-                      ". . cell-4 cell-4";
-
-  /* 백분율로 설계하고 갭을 주면 갭이 더해짐 > 프랙션단위를 사용하자! */
+  gap: 10px;
+  align-items: start;
+  /* 그리드는 무조건 justify-items가 x축, align-items가 y축 */
+  /* justify-items: center;
+  align-items: center; */
+  /* 전체 컨텐츠 정렬 / items는 해당 컬럼 안에서 중앙 */
+  justify-content: center;
+  align-content: center;
   
-  /* div:nth-child(odd) {
+  /* 그리드 아이템 스스로 혼자만 정렬되는 것! */
+  /* .grid-cell-7 {
+    justify-self: end;
+    align-self: end;
+  } */
+
+  .grid-cell-2, .grid-cell-10 {
+    grid-area: 1/3/5/4 !important;
+    background-color: transparent !important;
+  }
+
+  .grid-cell-2 {
+    justify-self: start;
+    align-self: start;
+  }
+  .grid-cell-10 {
+    justify-self: end;
+    align-self: end;
+  }
+
+
+  div:nth-child(odd){
     grid-column: span 2;
   }
-  
-  div:nth-child(even) {
+
+  div:nth-child(even){
     grid-row: span 2;
-  } */
+  }
+
+  img{
+    max-width: 100%;
+    height: 100%;
+
+    /* 그리드 속 이미지 배열? */
+    object-fit: cover;
+    object-position: 50% 50%;
+    transition: all 400ms;
+
+    &:hover {
+      scale: 1.5;
+    }
+  }
 }
-
-.grid-cell-1 {
-  grid-area: cell-1;
-}
-
-.grid-cell-2 {
-  grid-area: cell-2;
-}
-
-.grid-cell-3 {
-  grid-area: cell-3;
-}
-
-.grid-cell-4 {
-  grid-area: cell-4;
-}
-
-/* .grid-cell-1 {
-  grid-row-start: 3;
-  grid-column-start: 2;
-  grid-row-end: 5;
-  grid-column-end: 4;
-}
-
-.grid-cell-2 {
-  grid-row: 8/11;
-  grid-column: 5/6;
-}
-
-.grid-cell-3 {
-  grid-area: 7/2/9/4;
-}
-
-.grid-cell-4 {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.grid-cell-5 {
-  grid-row: 6/7;
-  grid-column: 1/-2;
-} */
-
-/* 음수값 : 반응형으로 각 기기별 컬럼 배치가 다를 때 유용하게 쓸 수 있다 */
-/* 그리드는 배치가 자유로운 만큼 접근성에 대한 고민이 필요하다 */
-/* 갭, 그리드 네임 속성, 리피트 함수는 익스11이 사용 안 됨 */
