@@ -31,6 +31,12 @@ li {
   }
 }
 
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+}
+
 /* 햄버거 버튼 */
 .burger-button {
   background: red;
@@ -47,6 +53,7 @@ li {
     left: 0;
     border-radius: 20px;
     background-color: #fff;
+    transition: all 400ms;
   }
 
   .burger-bar-top {
@@ -59,6 +66,31 @@ li {
   .burger-bar-bottom {
     top: 100%;
     translate: 0 -100%;
+  }
+}
+
+/* is-active 클래스가 있을 때 */
+.burger-button.is-active {
+  overflow: hidden;
+
+  span {}
+
+  .burger-bar-top, .burger-bar-bottom {
+    top: 50%;
+    translate: 0 -50%;
+  }
+
+  .burger-bar-top {
+    rotate: 1.125turn;
+    /* turn 단위 - 몇 바퀴 돌건지? */
+  }
+
+  .burger-bar-middle {
+    translate: -100% -50%;
+  }
+
+  .burger-bar-bottom {
+    rotate: -45deg;
   }
 }
 
