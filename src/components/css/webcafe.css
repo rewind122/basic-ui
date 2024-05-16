@@ -31,15 +31,15 @@ li {
   }
 }
 
-.header {
+/* .header {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: end;
-}
+  justify-content: space-between;
+} */
 
 /* 햄버거 버튼 */
 .burger-button {
-  background: red;
+  background: transparent;
   border: 0;
   padding: 0;
   width: 24px;
@@ -69,27 +69,32 @@ li {
   .burger-bar-bottom {
     align-self: end;
   }
+
+  /* is-active 클래스가 있을 때 */
+  &.is-active {
+    
+    .burger-bar-top, .burger-bar-bottom {
+      align-self: center;
+    }
+  
+    .burger-bar-top {
+      rotate: 45deg;
+    }
+    
+    .burger-bar-middle {
+      translate: -100% 0;
+    }
+    
+    .burger-bar-bottom {
+      rotate: -45deg;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
-/* is-active 클래스가 있을 때 */
-.burger-button.is-active {
-  
-  .burger-bar-top, .burger-bar-bottom {
-    align-self: center;
-  }
-
-  .burger-bar-top {
-    rotate: 45deg;
-  }
-  
-  .burger-bar-middle {
-    translate: -100% 0;
-  }
-  
-  .burger-bar-bottom {
-    rotate: -45deg;
-  }
-}
 
 /* 내비게이션 */
 /* position: fixed; 뷰포트 기준 배치 */
@@ -128,4 +133,18 @@ li {
       color: purple;
     }
   } */
+}
+
+
+/* 로고 */
+.logo {
+  background-color: blue;
+  background-image: image-set(
+    url(/images/webcafe-logo.png) 1x,
+    url(/images/webcafe-logo@2x.png) 2x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  aspect-ratio: 1/0.28921568627450983;
 }
