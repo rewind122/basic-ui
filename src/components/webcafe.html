@@ -5,15 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>그리드 가이드</title>
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/theory/css/grid-guide.css" />
+    <!-- <link rel="stylesheet" href="/theory/css/grid-guide.css" /> -->
     <link rel="stylesheet" href="/theory/css/defalt.css" />
     <link rel="stylesheet" href="/components/css/webcafe.css" />
     <script type="module" src="/theory/js/grid-guide.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="header yellow">헤더</div>
-      <div class="navigation pink">내비게이션</div>
+      <div class="header yellow">
+        헤더
+
+        <button type="button" aria-label="메인 메뉴 열기" class="burger-button">
+          <!-- 버튼 요소 안에 div를 넣으면 안 된다! 되도록 span 요소로 -->
+          <!-- 마크업 문법검사 요망 -->
+          <span class="burger-bar burger-bar-top"></span>
+          <span class="burger-bar burger-bar-middle"></span>
+          <span class="burger-bar burger-bar-bottom"></span>
+        </button>
+      </div>
+      <div class="navigation pink">
+        <nav class="menu" aria-label="메인 메뉴">
+          <ul>
+            <li class="menu-item"><a href="/" class="menu-">링크 목록1</a></li>
+            <li class="menu-item"><a href="/" class="menu-">링크 목록2</a></li>
+            <li class="menu-item"><a href="/" class="menu-">링크 목록3</a></li>
+            <li class="menu-item"><a href="/" class="menu-">링크 목록4</a></li>
+          </ul>
+        </nav>
+      </div>
       <div class="main green grid-container">
         <div class="book skyblue cols-6 sm-cols-4 lg-cols-3">추천서적</div>
         <div class="news orange cols-6 sm-cols-8 lg-cols-9">새소식</div>

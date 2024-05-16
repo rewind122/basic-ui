@@ -1,4 +1,15 @@
-@import url(./grid.css);
+@import url(/style/base.css);
+@import url(/style/reset.css);
+@import url(/components/css/grid.css);
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
 
 .container {
   min-height: 100vh;
@@ -6,16 +17,86 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+
+  .header, .navigation, .footer {
+    height: 100px;
+    width: 100%;
+  }
+  
+  .main {
+    max-width: 90%;
+    width: 100%;
+    flex: 1 0 auto;
+    gap: 24px;
+  }
 }
 
-.header, .navigation, .footer {
-  height: 100px;
-  width: 100%;
+/* 햄버거 버튼 */
+.burger-button {
+  background: red;
+  border: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+
+  .burger-bar {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    left: 0;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
+  .burger-bar-top {
+    top: 0;
+  }
+  .burger-bar-middle {
+    top: 50%;
+    translate: 0 -50%;
+  }
+  .burger-bar-bottom {
+    top: 100%;
+    translate: 0 -100%;
+  }
 }
 
-.main {
-  max-width: 90%;
-  width: 100%;
-  flex: 1 0 auto;
-  gap: 24px;
+/* 내비게이션 */
+/* position: fixed; 뷰포트 기준 배치 */
+/* transition - 애니메이션 */
+.menu {
+  position: fixed;
+  background: salmon;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100vh;
+  translate: -100% 0;
+  /* 선생님은 성능관점에서 translate을 선호 */
+  /* transition-property: translate, background;
+  transition-duration: 2000ms, 2000ms;
+  transition-delay: 0ms, 4000ms;
+  transition-timing-function: ease-in-out, ease-in-out; */
+
+  /* 시간 중 앞에 있는 게 무조건 듀레이션 */
+  /* transition: translate 2000ms 0ms ease-in-out, 
+              background 2000ms 2000ms ease-in-out; */
+  /* 트랜지션은 트리거?에 주는 거보단 밖에 짜는 게 좋다?? */
+  transition: all 0.4s;
+  
+  &.is-active {
+    translate: 0 0;
+    background: purple;
+  }
+
+  /* a {
+    font-size: 20px;
+    transition: color 1000ms;
+
+
+    &:hover {
+      color: purple;
+    }
+  } */
 }
