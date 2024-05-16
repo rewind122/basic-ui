@@ -44,53 +44,38 @@ li {
   padding: 0;
   width: 24px;
   height: 24px;
-  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 
   .burger-bar {
     width: 100%;
     height: 20%;
-    position: absolute;
-    left: 0;
-    border-radius: 20px;
     background-color: #fff;
-    transition: all 400ms;
-  }
-
-  .burger-bar-top {
-    top: 0;
-  }
-  .burger-bar-middle {
-    top: 50%;
-    translate: 0 -50%;
-  }
-  .burger-bar-bottom {
-    top: 100%;
-    translate: 0 -100%;
+    border-radius: 20px;
+    transition: rotate 400ms;
   }
 }
 
 /* is-active 클래스가 있을 때 */
 .burger-button.is-active {
   overflow: hidden;
+  justify-content: center;
 
   span {}
 
-  .burger-bar-top, .burger-bar-bottom {
-    top: 50%;
-    translate: 0 -50%;
-  }
-
   .burger-bar-top {
-    rotate: 1.125turn;
-    /* turn 단위 - 몇 바퀴 돌건지? */
+    translate: 0 100%;
+    rotate: .625turn;
   }
-
+  
   .burger-bar-middle {
-    translate: -100% -50%;
+    translate: -100% 0;
   }
-
+  
   .burger-bar-bottom {
-    rotate: -45deg;
+    translate: 0 -100%;
+    rotate: -.625turn;
   }
 }
 
