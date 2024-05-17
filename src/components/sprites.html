@@ -23,5 +23,36 @@
     <div class="flex-items-center headline sprite sprite-board">게시판</div>
     <div class="flex-items-center headline sprite sprite-favorite">인기사이트</div>
     <div class="flex-items-center headline sprite sprite-twitter">트위터</div>
+    <hr />
+
+    <!-- img - 크기 변경 가능, 색상 변경 불가 -->
+    <img class="icon-search" src="/images/icons/search.svg" alt="검색" />
+
+    <!-- svg - 크기 변경 가능, 색상 변경 가능 -->
+    <svg class="svg-icon-search" aria-labelledby="title desc" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <title id="title">검색</title>
+      <desc id="desc">부가 설명. 특정 기기에서는 못 읽어들이는 경우도 있음</desc>
+      <path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M7.14574 8.55995C6.45201 8.99709 5.63054 9.25 4.75 9.25C2.26472 9.25 0.25 7.23528 0.25 4.75C0.25 2.26472 2.26472 0.25 4.75 0.25C7.23528 0.25 9.25 2.26472 9.25 4.75C9.25 5.63054 8.99709 6.45201 8.55995 7.14574L11.4571 10.0429C11.8476 10.4334 11.8476 11.0666 11.4571 11.4571C11.0666 11.8476 10.4334 11.8476 10.0429 11.4571L7.14574 8.55995ZM7.25 4.75C7.25 6.13071 6.13071 7.25 4.75 7.25C3.36929 7.25 2.25 6.13071 2.25 4.75C2.25 3.36929 3.36929 2.25 4.75 2.25C6.13071 2.25 7.25 3.36929 7.25 4.75Z" fill="#181818"/>
+    </svg>
+    <!-- svg 요소는 alt를 쓸 수 없으니 aria-label 속성을 써주자! -->
+    <!-- 혹은 내부에 타이틀을 지정해서 대체텍스트를 넣어주자 -->
+    <!-- title / desc -->
+    <hr />
+    <div class="plus"></div>
+
+    <hr />
+    <!-- <img class="icon-circle" src="/images/icons/_sprite.svg#search" alt="" /> -->
+
+    <svg role="img" class="svg-icon" viewBox="0 0 12 12" aria-label="검색">
+      <use href="/images/icons/_sprite.svg#search"></use>
+    </svg>
+    <svg role="img" class="svg-icon" viewBox="0 0 20 20" aria-label="강조">
+      <use href="/images/icons/_sprite.svg#dot_circled"></use>
+    </svg>
+
+    <hr />
+    <div class="sprite-icon"></div>
+      
+
   </body>
 </html>

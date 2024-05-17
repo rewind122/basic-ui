@@ -41,3 +41,55 @@
   flex-flow: row nowrap;
   align-items: center;
 }
+
+[class^="icon"] {
+  width: 100px;
+  height: 100px;
+}
+
+.svg-icon-search {
+  width: 150px;
+  height: 150px;
+
+  path {
+    fill: greenyellow;
+
+    @media (prefers-color-scheme: dark) {
+      fill: blue;
+    }
+  }
+}
+
+/* svg 배경이미지 */
+.plus {
+  width: 100px;
+  height: 100px;
+  /* background-image: url(/images/icons/plus.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; */
+  background-color: blue;
+  mask-image: url(/images/icons/plus.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  /* 마스크 이미지를 이용해서 svg 이미지를 배경으로 쓰면서 색상 변경도 가능! */
+
+  @media (prefers-color-scheme: dark) {
+    background-color: green;
+  }
+}
+
+/* 익스텐션으로 만든 스프라이트 이미지... 동작 제대로 안 함... */
+[role="img"] {
+  width: 100px;
+  height: 100px;
+  
+  path {
+    fill: red;
+  }
+}
+
+.sprite-icon {
+  width: 100px;
+  height: 100px;
+  background-image: url(/images/icons/_sprite.svg#dot_circled);
+}
