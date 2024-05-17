@@ -28,13 +28,13 @@ h1 {
   }
 }
 
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
   .container {
-    /* max-width: 1440px;
-    grid-template-columns: 1fr 1fr 1fr; */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* 오토핏 - 자동으로 잡아늘려서 피팅 */
-    /* 오토필 - 공간이 남아있어도 늘리지 않음(딱 컬럼만큼만) */
-    /* 플렉서블한 레이아웃은 오토핏을 더 많이 사용~ */
   }
-}
+} */
+/* max-width: 1440px;
+grid-template-columns: 1fr 1fr 1fr; */
+/* 오토핏 - 자동으로 잡아늘려서 피팅 */
+/* 오토필 - 공간이 남아있어도 늘리지 않음(딱 컬럼만큼만) */
+/* 플렉서블한 레이아웃은 오토핏을 더 많이 사용~ */

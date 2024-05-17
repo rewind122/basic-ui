@@ -63,6 +63,8 @@
     grid-auto-rows: auto;
     gap: 1rem;
     color: #4A5569;
+    grid-template-columns: 1fr;
+    padding: 1rem;
 
     @container (min-width: 500px) {
       grid-template-columns: 3fr 7fr;
