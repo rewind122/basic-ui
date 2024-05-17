@@ -1,0 +1,47 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+body {
+  margin: 100px;
+  background-color: #000;
+  color: #fff;
+}
+
+.accordion {
+  background-color: #212121;
+  color: #fff;
+
+  details svg {
+    transition: all 0.4s;
+  }
+
+  details[open] svg {
+    rotate: 45deg;
+  }
+
+  summary {
+    font-size: 1.25rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+  }
+  summary::marker {
+    content: "";
+  }
+  div {
+    padding: 2rem 1.5rem;
+
+    p {
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    a{
+      text-decoration: underline;
+    }
+  }
+}
