@@ -195,7 +195,7 @@ li {
 
 /* 스프라이트 이미지 */
 /* 서버 요청 횟수를 줄이기 위해 스프라이트 이미지 하나로 */
-.sprite {
+/* .sprite {
   height: 60px;
   background-color: hotpink;
   background-image: url(/images/sprite_main.png);
@@ -205,4 +205,4 @@ li {
 
 .news .sprite {
   background-position: 0 -230px;
-}
+} */
