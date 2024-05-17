@@ -1,0 +1,20 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+figure {
+  margin: 0;
+  width: 20%;
+  float: left;
+  shape-outside: circle();
+  padding: 2rem;
+
+  img {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0 0;
+    /* mdn에서 다시 찾아보기 */
+  }
+}
