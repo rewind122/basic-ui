@@ -79,7 +79,7 @@
 }
 
 /* 익스텐션으로 만든 스프라이트 이미지... 동작 제대로 안 함... */
-[role="img"] {
+/* [role="img"] {
   width: 100px;
   height: 100px;
   
@@ -92,4 +92,13 @@
   width: 100px;
   height: 100px;
   background-image: url(/images/icons/_sprite.svg#dot_circled);
+} */
+
+/* 스택방식 */
+.sprite-icon{
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  /* mask-image: url(/images/icons/stack.svg#search); */
 }
+/* 왜 안되는지 확인해보자ㅠㅠ!! */
